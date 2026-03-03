@@ -18,7 +18,7 @@ Usa esta skill cuando el usuario mencione "construir agentes", "crear GPT", "gen
 3. Listar agentes de la Seccion 3 del blueprint
 4. Para cada agente:
    a. Buscar definicion existente en `00_inbox/02_Contents/MM_module/C_Custom_Agents/`
-   b. Leer el framework INFUSE de `00_inbox/Agente-Custom-GPT-Builder/agente-cuistom-gpt-builder.md`
+   b. Leer el framework INFUSE de `00_inbox/Agente-Custom-GPT-Builder/agente-custom-gpt-builder.md`
    c. Construir las 6 secciones INFUSE (I/N/F/U/S/E)
    d. Derivar knowledge file strategy del dominio del agente
    e. Configurar capabilities (web, code interpreter, images, canvas)

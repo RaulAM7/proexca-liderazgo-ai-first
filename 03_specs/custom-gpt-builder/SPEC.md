@@ -22,7 +22,7 @@ Una skill que, dado un blueprint frozen de un modulo, genera **paquetes completo
 
 ### Fuente de metodologia
 
-El documento base es `00_inbox/Agente-Custom-GPT-Builder/agente-cuistom-gpt-builder.md`, que define:
+El documento base es `00_inbox/Agente-Custom-GPT-Builder/agente-custom-gpt-builder.md`, que define:
 - Framework INFUSE (6 secciones: I/N/F/U/S/E)
 - Proceso de 8 pasos para construir GPTs
 - Preguntas de alineacion obligatorias

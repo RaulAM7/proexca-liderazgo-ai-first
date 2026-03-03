@@ -6,7 +6,7 @@
 |-------|------|-------------|-------|
 | Blueprint frozen | `04_outputs/blueprints/MM_slug/blueprint_v{N}.md` | Si | Debe tener `status: frozen` |
 | Agentes INFUSE existentes | `00_inbox/02_Contents/MM_module/C_Custom_Agents/*/` | No | Si populated, usados como punto de partida |
-| GPT Builder methodology | `00_inbox/Agente-Custom-GPT-Builder/agente-cuistom-gpt-builder.md` | Si | Framework INFUSE de referencia |
+| GPT Builder methodology | `00_inbox/Agente-Custom-GPT-Builder/agente-custom-gpt-builder.md` | Si | Framework INFUSE de referencia |
 | CONSTRAINTS | `02_context/CONSTRAINTS.md` | Si | Tono, marca, restricciones |
 | GLOSSARY | `02_context/GLOSSARY.md` | No | Terminologia del dominio |
 | Offer design | `00_inbox/00_Offer_Design/*.md` | Si | Avatar pain points para seccion Signals |
