@@ -6,3 +6,5 @@
 - `ship-output` (light): produces the final deliverable in `04_outputs/`.
 - `qa-review` (light): validates output against acceptance checklist.
 - `skill-creator` (strategic/heavy): creates and iterates skills with eval loop.
+- `emailing-copy` (light): genera copy profesional para emails institucionales.
+- `emailing-template-layout` (light): maqueta copy en plantilla HTML del módulo emailing.

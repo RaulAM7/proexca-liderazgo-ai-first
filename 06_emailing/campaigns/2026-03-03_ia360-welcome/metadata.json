@@ -1,0 +1,10 @@
+{
+  "campaign": "ia360-welcome",
+  "date": "2026-03-03",
+  "subject": "Hoy empieza IA360 — Liderazgo AI-First",
+  "preheader": "Tu programa de IA aplicada para directivos arranca hoy.",
+  "audience": "Directivos/líderes PROEXCA",
+  "variables": ["{{nombre}}"],
+  "template": "base_light",
+  "status": "ready"
+}
