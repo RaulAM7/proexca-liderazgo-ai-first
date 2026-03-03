@@ -25,7 +25,5 @@ En las próximas horas recibirás:
 **Hoy a las 14:00h: tu primera masterclass.**
 Fer Martín abre el programa en directo. Es el primer paso y el más importante — recibirás el enlace de acceso por separado.
 
-# CTA Final
-## Accede a Campus EduKami
-Todo el programa está centralizado en una sola plataforma. Cuando recibas tu invitación, este será tu punto de entrada.
-Acceder a Campus EduKami → https://app.edukami.ai/login
+# Cierre
+— Equipo IA360 · EduKami University
