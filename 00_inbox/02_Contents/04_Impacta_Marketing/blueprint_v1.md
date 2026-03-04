@@ -34,6 +34,8 @@ date: 2026-03-03
 - **CU-04: Campanas de email marketing** — disenar comunicaciones promocionales de programas, convocatorias y oportunidades de internacionalizacion
 - **CU-05: Contenido para redes sociales (marketing)** — generar posts promocionales orientados a captar atencion sobre servicios, programas y logros de internacionalizacion
 - **CU-06: Activos visuales con IA** — producir imagenes, graficos e infografias para materiales de marketing usando herramientas de generacion visual
+- **CU-07: Analisis de posicionamiento competitivo** — analizar como se posiciona Canarias (o un sector canario) frente a competidores internacionales, usando STP y frameworks de brand positioning para identificar gaps y oportunidades de diferenciacion
+- **CU-08: Plan de contenidos pre-evento** — disenar calendario editorial y piezas de contenido coordinadas (email + RRSS + visual) para las semanas previas a una feria, mision comercial o evento de internacionalizacion
 
 ## 3. Sistema IA (agentes)
 
@@ -41,15 +43,15 @@ date: 2026-03-03
 - **Nombre**: Marketing Estrategico PROEXCA
 - **Rol**: Director de Marketing de internacionalizacion + estratega de contenido institucional
 - **Problema mental que resuelve**: "Necesito producir dosieres, pitches y materiales de feria con calidad profesional y en horas, no en semanas."
-- **CUs que cubre**: CU-01 (dosieres), CU-02 (pitch decks), CU-03 (contenido ferias/eventos)
-- **Logica de agrupacion**: Estos 3 use cases comparten la misma naturaleza — documentos estrategicos largos, orientados a un interlocutor externo especifico, con alto nivel de personalizacion y tono institucional. Requieren las mismas metodologias (estructura persuasiva, adaptacion al perfil, coherencia de marca).
+- **CUs que cubre**: CU-01 (dosieres), CU-02 (pitch decks), CU-03 (contenido ferias/eventos), CU-07 (analisis de posicionamiento)
+- **Logica de agrupacion**: Estos use cases comparten la misma naturaleza — trabajo estrategico de marketing orientado a interlocutores externos, con alto nivel de personalizacion y tono institucional. Requieren las mismas metodologias (estructura persuasiva, adaptacion al perfil, coherencia de marca, analisis competitivo). El agente es un Senior Marketing Strategist con capacidades abiertas — estos CUs son ejemplos frecuentes, no limites.
 
 ### Sub-agente 1
 - **Nombre**: Marketing Digital PROEXCA
 - **Rol**: Especialista en comunicacion digital promocional + campanas
 - **Problema mental que resuelve**: "Necesito mantener activos los canales digitales de promocion con contenido constante y coherente, sin que sea un trabajo a tiempo completo."
-- **CUs que cubre**: CU-04 (email marketing), CU-05 (RRSS marketing), CU-06 (activos visuales)
-- **Logica de agrupacion**: Estos 3 use cases son contenido digital de ciclo corto — piezas frecuentes, multiformato, orientadas a engagement y conversion. Comparten tono mas agil que los documentos estrategicos, formatos mas compactos, y la necesidad de generar volumen con consistencia.
+- **CUs que cubre**: CU-04 (email marketing), CU-05 (RRSS marketing), CU-06 (activos visuales), CU-08 (plan de contenidos pre-evento)
+- **Logica de agrupacion**: Estos use cases son marketing digital — piezas frecuentes, multiformato, orientadas a engagement y conversion, mas planificacion editorial. Comparten tono mas agil que los documentos estrategicos, formatos mas compactos, y la necesidad de generar volumen con consistencia. El agente es un Head of Digital Marketing con capacidades abiertas — estos CUs son ejemplos frecuentes, no limites.
 
 ## 4. Casos practicos guiados
 
@@ -69,6 +71,14 @@ date: 2026-03-03
   - Supuesto realista: Lanzar una convocatoria para empresas canarias interesadas en exportar al mercado latinoamericano. Necesitas un email que convenza a directivos ocupados.
   - Walkthrough: objetivo + audiencia → briefing → generacion de copy (subject + body + CTA) → revision de tono → email listo.
 
+- **Clase practica CU-07**: "Analisis de posicionamiento de Canarias como hub tech vs competidores"
+  - Supuesto realista: PROEXCA quiere entender como se posiciona Canarias frente a otros hubs tech europeos (Malta, Estonia, Lisboa) para redefinir su propuesta de valor ante inversores.
+  - Walkthrough: definir competidores y criterios → briefing al agente con contexto → aplicacion de STP y frameworks de posicionamiento → mapa perceptual de posicionamiento → identificacion de gaps y oportunidades → recomendacion de posicionamiento diferenciador.
+
+- **Clase practica CU-08**: "Plan de contenidos para las 3 semanas previas a feria internacional"
+  - Supuesto realista: PROEXCA participa en una feria de economia azul en Lisboa en 3 semanas. Necesitas un plan de contenidos coordinado (emails + RRSS + visual) que genere expectativa, informe y active a la audiencia.
+  - Walkthrough: datos del evento + objetivos → briefing al agente → calendario editorial semanal → generacion de piezas por semana (teaser → informativo → urgencia/CTA) → revision de coherencia entre canales → plan final listo para ejecutar.
+
 ## 5. Toolkit ejecutiva
 
 - **Agentes**:
@@ -80,15 +90,19 @@ date: 2026-03-03
     - "Dosier sectorial express" — genera estructura + contenido de dosier sectorial dado sector + pais + contexto
     - "Pitch adaptado" — genera pitch deck adaptado al perfil del interlocutor (tipo + sector + objetivo)
     - "Kit feria" — genera pack coordinado (nota de prensa + ficha + guion) para un evento dado
+    - "Analisis de posicionamiento" — analiza posicionamiento de Canarias/sector vs competidores usando STP y brand positioning frameworks
   - → Marketing Digital:
     - "Email promo" — genera email de campana con subject, preheader, body y CTA
     - "Post LinkedIn institucional" — genera post promocional para RRSS con tono institucional
     - "Brief creativo visual" — genera briefing para la produccion de activos visuales (imagen, infografia, banner)
+    - "Plan contenidos pre-evento" — diseña calendario editorial + piezas coordinadas para semanas previas a evento
 
 - **Mini-playbooks**:
   - Si tienes una feria en <2 semanas → usa "Kit feria" + revisa tono con CONSTRAINTS
   - Si necesitas un dosier y no tienes datos → usa primero Research & Insights (modulo 05) y luego "Dosier sectorial express"
   - Si el pitch es para un publico no hispanohablante → genera en español, luego usa "Traduccion ejecutiva" del toolkit general
+  - Si necesitas redefinir posicionamiento antes de una feria → usa "Analisis de posicionamiento" primero, luego "Kit feria" con el angulo resultante
+  - Si tienes evento en <3 semanas → usa "Plan contenidos pre-evento" para coordinar emails + RRSS + visual en un calendario
 
 ## 6. Sintesis operativa
 

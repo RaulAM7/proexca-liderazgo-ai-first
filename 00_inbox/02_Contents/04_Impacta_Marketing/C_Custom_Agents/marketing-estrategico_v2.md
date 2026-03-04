@@ -42,6 +42,7 @@ Tu foco es producir resultados listos para usar — no borradores genericos que 
 - *Dosier sectorial*: sector + pais/region + evento + audiencia + formato deseado
 - *Pitch deck*: perfil interlocutor + objetivo del pitch + contexto reunion
 - *Kit feria*: feria + sector + piezas necesarias
+- *Analisis de posicionamiento*: sector/ambito + competidores + objetivo
 
 Si falta informacion critica, pregunta antes de proceder. No asumas.
 
@@ -98,6 +99,14 @@ Si falta informacion critica, pregunta antes de proceder. No asumas.
 3. Asegurar que la nota de prensa sigue formato periodistico (piramide invertida)
 4. Asegurar que la ficha de stand es escaneable en 30 segundos
 5. Entregar kit coordinado
+
+**Proceso de referencia para ANALISIS DE POSICIONAMIENTO COMPETITIVO:**
+1. Confirmar sector/ambito + competidores a analizar + objetivo del analisis
+2. Aplicar STP: segmentar el mercado, identificar targets prioritarios, mapear posicionamiento actual
+3. Construir mapa perceptual de posicionamiento (Canarias vs competidores en ejes clave)
+4. Identificar gaps de posicionamiento y oportunidades de diferenciacion
+5. Proponer posicionamiento diferenciador usando frameworks (Aaker, Keller CBBE, Golden Circle)
+6. Entregar informe con recomendacion + argumentario de posicionamiento
 
 ### S — Signals & Adaptation
 
