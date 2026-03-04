@@ -62,11 +62,14 @@ Para cada agente, busca en `00_inbox/02_Contents/MM_module/C_Custom_Agents/` si 
 
 Para cada agente, construye las 6 secciones INFUSE. Lee `references/infuse-framework.md` para la guia detallada de cada seccion y el mapeo desde el blueprint.
 
+**Principio fundamental — Enfoque por Rol:**
+Cada agente encarna un **ROL profesional senior** con capacidades abiertas en su dominio. El agente NUNCA dice "produzco N tipos de X". Los use cases del blueprint son **ejemplos frecuentes** que se enseñan en el curso, no el limite del agente. El agente puede abordar cualquier reto dentro de su rol profesional.
+
 **Reglas criticas por seccion:**
-- **I (Identity):** Referenciar contexto PROEXCA + rol del agente + problema mental que resuelve
-- **N (Navigation):** Incluir patron GATE (inputs minimos antes de proceder) + limites claros
+- **I (Identity):** Referenciar contexto PROEXCA + ROL senior que encarna (ej: "Senior Marketing Strategist", "Head of Digital Marketing") + dominio profesional abierto. Los CUs del blueprint se mencionan como ejemplos frecuentes, no como limites. NUNCA escribir "produces N tipos de documentos/contenido".
+- **N (Navigation):** Incluir patron GATE abierto al dominio del rol (no restringido a los tipos de output del blueprint). Los tipos de output del blueprint son atajos frecuentes, no restricciones. El agente acepta cualquier reto de su dominio profesional.
 - **F (Flow):** Tono ejecutivo, directo, español, sin jerga
-- **U (User Guidance):** Proceso operativo NUMERADO, no narrativo. Basado en los CUs asignados al agente
+- **U (User Guidance):** Primer bloque = proceso generico abierto ("Para cualquier reto de [dominio del rol]") con pasos generales. Bloques siguientes = workflows especificos de los CUs del blueprint como referencia y ejemplo. Siempre numerado, nunca narrativo.
 - **S (Signals):** Cubrir minimo 4 estados: prisa, confusion, enfado, vaguedad
 - **E (End Instructions):** Items "nunca hacer" + mandatos permanentes
 
@@ -76,13 +79,15 @@ Tras las 6 secciones INFUSE, añade:
 
 **Knowledge Files Strategy:** Que archivos subir al GPT, que contienen, por que se necesitan. Ser explicito.
 
+**OBLIGATORIO — Knowledge de metodologias del rol:** Para cada agente, buscar e incluir metodologias, frameworks y best practices de reconocido prestigio mundial para el rol profesional que encarna. Generar archivos .md con el contenido de estas metodologias (explicacion practica, cuando usar, pasos, ejemplos). Estos archivos van **junto al .md del custom agent** en su misma carpeta (ej: `00_inbox/02_Contents/MM_module/C_Custom_Agents/knowledge/`). Ejemplos: PESTEL, DAFO, SCQA, STP, BLUF, AIDA, piramide invertida, framework PESO, etc. segun el dominio del rol.
+
 **Capabilities Configuration:**
 - Web search: on/off + justificacion
 - Code interpreter: on/off + justificacion
 - Image generation: on/off + justificacion
 - Canvas: on/off + justificacion
 
-**Prompt Starters:** Minimo 4, mapeados 1:1 a use cases del blueprint asignados al agente. Deben ser frases naturales que un directivo escribiria.
+**Prompt Starters:** Minimo 4 mapeados a use cases del blueprint + al menos 1-2 prompts abiertos del rol (ej: "Ayudame a diseñar una estrategia de...", "Necesito tu opinion experta sobre..."). Deben ser frases naturales que un directivo escribiria. La mezcla de prompts especificos (CUs) + abiertos (rol) refuerza que el agente no esta limitado a los CUs.
 
 **Guardrails:** Derivar de `02_context/CONSTRAINTS.md` — no alucinar datos, no jerga sin explicar, tono institucional.
 
@@ -98,9 +103,11 @@ Guardar en `04_outputs/gpt-packages/MM_slug/agent-slug_v{N}.md` con YAML frontma
 
 ## Reglas
 
+- **Enfoque por Rol**: cada agente es una skill de rol profesional senior con capacidades abiertas en su dominio. Los CUs del blueprint son ejemplos frecuentes, no limites. El agente puede abordar cualquier reto de su rol.
 - Las 6 secciones INFUSE son obligatorias — no se admiten agentes parciales
 - Referenciar metodologias reales (BLUF, SCQA, piramide invertida, etc.) — nunca inventar
-- Prompt starters mapean a use cases del blueprint — no generar starters genericos
+- **Knowledge de metodologias obligatorio**: generar archivos .md de frameworks/metodologias de prestigio del rol, ubicados junto al .md del agent
+- Prompt starters: mezcla de CUs del blueprint + prompts abiertos del rol
 - Cada paquete autocontenido (leible sin otros archivos)
 - Todo en español, tono ejecutivo
 - Knowledge files strategy explicita (no solo "subir archivos relevantes")
@@ -108,8 +115,10 @@ Guardar en `04_outputs/gpt-packages/MM_slug/agent-slug_v{N}.md` con YAML frontma
 
 ## Anti-patterns
 
+- **Cerrar el agente a N tipos de output** — los CUs del blueprint son ejemplos frecuentes, no limites. NUNCA "produces N tipos de X"
 - Secciones INFUSE genericas que podrian aplicar a cualquier agente — cada agente tiene dominio especifico
 - Copiar un agente existente sin adaptar al blueprint concreto
-- Prompt starters que no corresponden a use cases del blueprint
+- Prompt starters que SOLO corresponden a CUs del blueprint sin incluir prompts abiertos del rol
+- Omitir knowledge files de metodologias del rol
 - Omitir knowledge files strategy o capabilities config
 - Generar agentes sin validation checklist

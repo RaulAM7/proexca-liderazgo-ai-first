@@ -1,5 +1,16 @@
 # RULES: custom-gpt-builder
 
+## Enfoque por Rol
+
+- Cada agente encarna un **rol profesional senior** con capacidades abiertas en su dominio, no produce N tipos de output
+- La seccion Identity NUNCA dice "produces N tipos de X" — describe el rol y dominio profesional de forma abierta
+- Los use cases del blueprint son **ejemplos frecuentes** que se enseñan en el curso, no el limite del agente
+- Knowledge files DEBEN incluir archivos .md de metodologias/frameworks de reconocido prestigio para el rol (ej: PESTEL, DAFO, SCQA, STP, BLUF, AIDA, PESO, AARRR segun dominio)
+- Los .md de metodologias van junto al .md del custom agent en `knowledge/`
+- Prompt starters: mezcla de CUs del blueprint + al menos 1-2 prompts abiertos del rol
+- Navigation: GATE abierto al dominio del rol, los tipos de output del blueprint son atajos frecuentes no restricciones
+- User Guidance: primer bloque = proceso generico abierto del rol, bloques siguientes = workflows de CUs como referencia
+
 ## Estructura INFUSE
 
 - Cada agente DEBE tener las 6 secciones INFUSE completas (I, N, F, U, S, E) — no se admiten agentes parciales

@@ -51,8 +51,10 @@ Para modulos sin agentes existentes:
 
 ## Decisiones de diseno
 
+- **Enfoque por Rol, no por Output**: cada agente es un senior expert en un rol profesional con capacidades abiertas en su dominio. Los use cases del blueprint son ejemplos frecuentes que se enseñan en el curso, no el limite del agente. El agente puede abordar cualquier reto dentro de su rol. NUNCA se dice "produces N tipos de X".
 - Cada paquete GPT es **autocontenido**: leible sin necesidad de otros archivos
 - Las instrucciones INFUSE se escriben en español, tono ejecutivo
-- Prompt starters mapean 1:1 a use cases del blueprint (minimo 4)
+- Prompt starters: mezcla de CUs del blueprint (minimo 4) + prompts abiertos del rol (minimo 1-2)
+- **Knowledge de metodologias obligatorio**: para cada agente se generan archivos .md con metodologias/frameworks de reconocido prestigio mundial del rol (ej: PESTEL, SCQA, STP, BLUF, AIDA). Estos archivos van junto al .md del custom agent en su misma carpeta (`knowledge/`)
 - El validation checklist es parte del paquete, no un archivo separado
 - La skill bundlea `references/infuse-framework.md` y `references/agent-examples.md` para mantener SKILL.md bajo 500 lineas

@@ -5,16 +5,19 @@ Guia para construir las 6 secciones INFUSE de cada Custom GPT/GEM.
 ## Las 6 secciones
 
 ### I — Identity & Goal
-Define quien es el agente y que hace. Incluye:
-- Rol profesional que encarna (ej: "Director de Marketing estrategico")
+Define quien es el agente y que hace. El agente encarna un **ROL profesional senior** con capacidades abiertas en su dominio — no es una maquina de N outputs. Los use cases del blueprint son ejemplos frecuentes que se enseñan en el curso, no el limite del agente. NUNCA escribir "produces N tipos de X". Incluye:
+- Rol profesional senior que encarna (ej: "Senior Marketing Strategist de internacionalizacion", "Head of Digital Marketing")
+- Dominio profesional abierto donde el agente puede ayudar
 - Mision en 1-2 frases
 - Contexto institucional PROEXCA
-- Metodologias que aplica (nombrar las reales, no inventar)
+- Ejemplos frecuentes de lo que puede hacer (derivados de los CUs del blueprint), presentados como ejemplos no como limites
+- Metodologias que domina (nombrar las reales, no inventar)
 - Foco: "guiar, corregir, mejorar y optimizar. No respuestas genericas: diseñar sistemas."
 
 ### N — Navigation Rules
-Define que puede y que NO puede hacer el agente. Incluye:
-- **Patron GATE**: inputs minimos que el agente exige antes de proceder (ej: "Antes de redactar, necesito: destinatario, objetivo, plazo, tono")
+Define que puede y que NO puede hacer el agente. El GATE es abierto al dominio completo del rol, no restringido a los tipos de output del blueprint. Los tipos de output del blueprint son atajos frecuentes, no restricciones. Incluye:
+- **Patron GATE**: inputs minimos que el agente exige antes de proceder, formulados de forma abierta al dominio (ej: "Antes de ayudarte, necesito: que reto tienes, contexto, audiencia/destinatario, resultado esperado")
+- Atajos frecuentes del GATE para los CUs del blueprint (ej: "Si es un dosier, necesito: sector + audiencia + evento")
 - Limites de dominio (no responde fuera de su area)
 - No inventa datos ni especula
 - Si hay riesgo (reputacional, legal, sensible) → sugiere alternativa humana
@@ -29,9 +32,9 @@ Define como se comunica. Incluye:
 
 ### U — User Guidance
 Define el proceso operativo del agente. **Siempre numerado, nunca narrativo.**
-- Proceso de 4-8 pasos que sigue el agente para cada tarea
+- **Primer bloque obligatorio**: proceso generico abierto ("Para cualquier reto de [dominio del rol]") con pasos generales aplicables a cualquier peticion del dominio (ej: 1. Entender el reto, 2. Analizar contexto, 3. Proponer enfoque, 4. Desarrollar, 5. Revisar y ajustar)
+- **Bloques siguientes**: workflows especificos de los CUs del blueprint como referencia y ejemplo (ej: "Proceso para DOSIERES:", "Proceso para EMAILS:")
 - Cada paso es una accion concreta (clasificar, analizar, proponer, redactar, ajustar, revisar)
-- Basado en los use cases asignados al agente en el blueprint
 - Incluir sub-pasos si son complejos
 
 ### S — Signals & Adaptation
@@ -90,6 +93,7 @@ status: ready
 ### E — End Instructions
 
 ## Knowledge Files Strategy
+**OBLIGATORIO**: incluir archivos .md de metodologias/frameworks de reconocido prestigio mundial para el rol profesional del agente. Estos archivos se generan con contenido practico (explicacion, cuando usar, pasos, ejemplos) y se ubican junto al .md del custom agent en `knowledge/`. Ejemplos segun dominio: PESTEL, DAFO, SCQA, STP, BLUF, AIDA, PESO, AARRR, piramide invertida, etc.
 - Archivo 1: [nombre] — [que contiene, por que]
 
 ## Capabilities Configuration
@@ -101,8 +105,10 @@ status: ready
 ## Prompt Starters
 1. "[mapeado a CU-XX]"
 2. "[mapeado a CU-XX]"
-3. "..."
-4. "..."
+3. "[mapeado a CU-XX]"
+4. "[mapeado a CU-XX]"
+5. "[prompt abierto del rol — ej: Ayudame a diseñar una estrategia de...]"
+6. "[prompt abierto del rol — ej: Necesito tu opinion experta sobre...]"
 
 ## Guardrails
 - [guardrail]
