@@ -19,6 +19,14 @@
     <link rel="apple-touch-icon" href="https://i.ibb.co/n26FVnw/Isotipo-color.jpg">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3654X299PN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3654X299PN');
+    </script>
 </head>
 
 <body>
@@ -515,6 +523,20 @@
                     const y = e.clientY - rect.top;
                     card.style.setProperty('--mouse-x', `${x}px`);
                     card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+
+            // Track agent clicks in GA4
+            document.querySelectorAll('.card-action').forEach(link => {
+                link.addEventListener('click', function () {
+                    const card = this.closest('.agent-card');
+                    const agentName = card.querySelector('.card-title').textContent.trim();
+                    const module = card.closest('.module-section');
+                    const moduleName = module.querySelector('.module-title').textContent.trim();
+                    gtag('event', 'click_agent', {
+                        agent_name: agentName,
+                        module_name: moduleName
+                    });
                 });
             });
 
