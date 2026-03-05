@@ -48,6 +48,41 @@ Las plantillas usan placeholders `{{variable}}`:
 | `{{final_title}}` | Título CTA final |
 | `{{final_paragraph}}` | Párrafo CTA final |
 
+## Alumnos matriculados
+
+| # | Email | Organización |
+|---|-------|-------------|
+| 1 | acabmesj@gobiernodecanarias.org | Gobierno de Canarias |
+| 2 | urodcab@gobiernodecanarias.org | Gobierno de Canarias |
+| 3 | pmartin@proexca.es | PROEXCA |
+| 4 | mercedes.fernandez@proexca.es | PROEXCA |
+| 5 | pedro.monzon@proexca.es | PROEXCA |
+| 6 | pilar.moreno@proexca.es | PROEXCA |
+| 7 | j.lorenzo@proexca.es | PROEXCA |
+| 8 | alfonso.cabello@proexca.es | PROEXCA |
+| 9 | asesorpresidencia@proexca.es | PROEXCA |
+
+## Template de envío (Google Apps Script)
+
+Plantilla lista para usar en Google Apps Script. Copiar en un proyecto de Apps Script junto con el archivo `newsletter.html` de la campaña correspondiente.
+
+```javascript
+// Código.gs
+function sendNewsletter() {
+  var html = HtmlService.createHtmlOutputFromFile('newsletter').getContent();
+
+  MailApp.sendEmail({
+    to: 'raul@reboot.academy',
+    bcc: 'raul@skilland.ai, raulartilesm@gmail.com, leonorquintana97@gmail.com, acabmesj@gobiernodecanarias.org, urodcab@gobiernodecanarias.org, pmartin@proexca.es, mercedes.fernandez@proexca.es, pedro.monzon@proexca.es, pilar.moreno@proexca.es, j.lorenzo@proexca.es, alfonso.cabello@proexca.es, asesorpresidencia@proexca.es',
+    subject: 'Aquí tienes tu acceso a IA 360: Liderazgo AI-First',
+    htmlBody: html,
+    name: 'Raúl de EduKami University',
+    noReply: false,
+    replyTo: 'raul@reboot.academy'
+  });
+}
+```
+
 ## Skills relacionadas
 
 - `emailing-copy`: genera el copy del email a partir de un briefing
